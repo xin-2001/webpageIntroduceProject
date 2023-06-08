@@ -11,39 +11,77 @@
                 cursor: url(https://cur.cursors-4u.net/nature/nat-5/nat417.ani), url(https://cur.cursors-4u.net/nature/nat-5/nat417.png), auto !important;
                 font-family: Times New Roman,'標楷體';
 				word-break: break-all;
-                background: #a0b9c6;
+                color: #FFFFFF;
+            }
+            html{
+                background-image: url(background_img.jpg);
+                background-color: rgba(0, 0, 0, .6);
+                /*設置背景混和模式為相乘模式*/
+                background-blend-mode: multiply;
+                background-size: cover;
+                background-position: center center;
             }
             .cssSet{
-                border: solid 1px #8800FF;
+                border: solid 1px #7f6a93;
                 border-radius: 20px;
                 padding: 10px;
-                line-height:30px;
+                margin: 0px;
+                
             }
-            .cssSet p{
-                margin-bottom: -5px;
-                margin-top: -5px;
-                background: #FFFFFF;
+            .cssSet >p{
+                background: #9db5b2;
+                padding: 10px;
+                border-radius: 20px;
+                margin: 0px;
+            }
+            .buttonEffect > p{
+                background: #7f6a93;
+                padding-left: 10px;
+                border-radius: 10px;
+                margin: 0px;
+            }
+            .effectHoverStyle{
+                border: solid 1px #7f6a93;
+                margin: 0px;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 3px 10px;
+            }
+            .effectActiveStyle{
+                border: solid 1px #7f6a93;
+                margin: 0px;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 3px 10px;
             }
 
             .buttonOutSet{
-                border: solid 1px #88DDFF;
-                margin: 5px;
+                border: solid 1px #a2c5ac;
+                margin: 0px;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 3px 10px;
             }
             .buttonInSet{
-                border: solid 1px #AA11FF;
-                margin: 5px;
+                border: solid 1px #a2c5ac;
+                margin: 0px;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 3px 10px;
             }
             .buttonEffect{
-                border: solid 1px #88DDFF;
-                margin: 5px;
+                border: solid 1px #a2c5ac;
+                border-radius: 10px;
+                padding: 3px 10px;
             }
+            
             .windowsLeft{
                 float: left;
-                width: 70%;
+                width: 60%;
             }
             .windowsRight{
                 float: left;
-                width: 30%;
+                width: 40%;
                 height: 100%;
 
             }
@@ -56,6 +94,7 @@
                 height: 100%;
                 margin-left: 10px;
             }
+
             .buttonResult{
                 width: 100px;
                 height: 30px;
@@ -69,19 +108,33 @@
             }
             .windows{
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
             }
             .textResult{
                 text-align: left;
                 font-size: 20px;
             }
-            .buttonEffect div{
-                margin-bottom: 5px;
+            .cssResult p{
+                text-align: left;
             }
-            .codeText{
+            .buttonEffect div{
+                /*margin-top: -12px;*/
+            }
+            .codeHTMLText{
                 width: 100%;
                 height: auto;
-                margin-top: 10px;
+                resize: none;
+            }
+            .codeCSSText{
+                width: 100%;
+                height: 200px;
+                /*overflow: hidden;*/
+                resize: none;
+            }
+            textarea{
+                border-color: #FFFFFF;
+                padding: 3px;
+                background-color: rgba(0, 0, 0, 0.6);
             }
             
 
@@ -160,7 +213,7 @@
                                 <option value="Yozai-Light">Yozai Light</option>
                                 <option value="Yozai-Medium">Yozai Medium</option>
                                 <option value="Yozai-Regular">Yozai Regular</option>
-                                <option value="YuPearl-SemiBold">YuPearl SemiBold</option>
+                                <option value="YuPearl-SemiBold">YuPearl SemiBold</option>s
                             </select>
                         <br>
                         字體大小：<input type="number" name="wordSize" value="12" style="width: 50px;" value="12">px
@@ -172,6 +225,8 @@
                     <div class="buttonEffect">
                         <p class="hoverStyle">滑鼠移到上方時</p>
                         <div class="effectHoverStyle">
+                            <input type="button" class="buttonSame1" value="同上">
+                            <br>
                             寬度：<input type="number" name="widthHoverSet" style="width: 50px;" value="100">px
                             <br>
                             高度：<input type="number" name="heightHoverSet" style="width: 50px;" value="30">px
@@ -187,6 +242,8 @@
                         </div>
                         <p class="activeStyle">滑鼠點擊時</p>
                         <div class="effectActiveStyle">
+                            <input type="button" class="buttonSame2" value="同上">
+                            <br>
                             寬度：<input type="number" name="widthActiveSet" style="width: 50px;" value="100">px
                             <br>
                             高度：<input type="number" name="heightActiveSet" style="width: 50px;" value="30">px
@@ -212,7 +269,10 @@
                     <p class="textResult">結果顯示：</p>
                     <input type="button" class="buttonResult" value="Button">
                     <br>
-                    <textarea readonly="false" class="codeText"></textarea>
+                    <p>HTML：</p>
+                    <textarea readonly="false" class="codeHTMLText" wrap="physical"></textarea>
+                    <p>CSS：</p>
+                    <textarea readonly="false" class="codeCSSText" wrap="physical"></textarea>
                 </div>
 
             </div>
@@ -227,6 +287,86 @@
             var effectStyle = false;
             var effectHoverStyle = true;
             var effectActiveStyle= false;
+
+            var HTML='<input type="button" class="buttonSet" value="Button">';
+            var CSS='.buttonSet{\n'+
+                '\twidth: 100px;\n'+
+                '\theight: 30px;\n'+
+                '\tborder: solid 1px #000000;\n'+
+                '\tbackground: #DDDDDD;\n'+
+                '\tborder-radius: 0px;\n'+
+                '\tfont-family: "標楷體";\n'+
+                '\tfont-size: 12px;\n'+
+                '\tcolor: #000000;\n'+
+                '}';
+            function oneCSSSet(){
+                if(buttonOutSet){
+                    $(".buttonOutSet").css("visibility","hidden");
+                    $(".buttonOutSet").css("height","0px");
+
+                }else{
+                    $(".buttonOutSet").css("visibility","visible");
+                    $(".buttonOutSet").css("height","auto");
+                    
+                }
+                if(buttonInSet){
+                    $(".buttonInSet").css("visibility","hidden");
+                    $(".buttonInSet").css("height","0px");
+                    
+                }else{
+                    $(".buttonInSet").css("visibility","visible");
+                    $(".buttonInSet").css("height","auto");
+                    
+                }
+                /*if(effectStyle){
+                    $(".buttonEffect").css("visibility","hidden");
+                    $(".buttonEffect").css("height","0px");
+                    effectStyle = false;
+                    $(".effectHoverStyle").css("visibility","hidden");
+                    $(".effectHoverStyle").css("height","0px");
+                    effectHoverStyle = false;
+                    $(".effectActiveStyle").css("visibility","hidden");
+                    $(".effectActiveStyle").css("height","0px");
+                    effectActiveStyle = false;
+                }else{
+                    $(".buttonEffect").css("visibility","visible");
+                    $(".buttonEffect").css("height","auto");
+                    $(".effectHoverStyle").css("visibility","visible");
+                    $(".effectHoverStyle").css("height","auto");
+                    buttonOutSet = false;
+                    buttonInSet = false;
+                    effectStyle = true;
+                    effectHoverStyle = true;
+                    effectActiveStyle= false;
+                }*/
+                if(effectHoverStyle){
+                    $(".effectHoverStyle").css("visibility","hidden");
+                    $(".effectHoverStyle").css("height","0px");
+                    
+                }else{
+                    $(".effectHoverStyle").css("visibility","visible");
+                    $(".effectHoverStyle").css("height","auto");
+                    
+                }
+                if(effectActiveStyle){
+                    $(".effectActiveStyle").css("visibility","hidden");
+                    $(".effectActiveStyle").css("height","0px");
+                    
+                }else{
+                    $(".effectActiveStyle").css("visibility","visible");
+                    $(".effectActiveStyle").css("height","auto");
+                    
+                }
+                buttonOutSet = !buttonOutSet;
+                buttonInSet = !buttonInSet;
+                effectStyle = !effectStyle;
+                effectHoverStyle = !effectHoverStyle;
+                effectActiveStyle= !effectActiveStyle;
+                
+            }
+            
+            $(".codeHTMLText").val(HTML);
+            $(".codeCSSText").val(CSS);
             
             $(".buttonOutSet").css("visibility","visible");
             $(".buttonBackgroundStyle").click(function(){
@@ -238,8 +378,14 @@
                 }else{
                     $(".buttonOutSet").css("visibility","visible");
                     $(".buttonOutSet").css("height","auto");
-                    buttonOutSet = true;
+                    buttonInSet = true;
+                    effectStyle = true;
+                    effectHoverStyle = true;
+                    effectActiveStyle= true;
+                    oneCSSSet();
+                    
                 }
+                
             });
             $(".buttonInSet").css("visibility","hidden");
             $(".buttonInSet").css("height","0px");
@@ -251,8 +397,15 @@
                 }else{
                     $(".buttonInSet").css("visibility","visible");
                     $(".buttonInSet").css("height","auto");
-                    buttonInSet = true;
+                    
+                    buttonOutSet = true;
+                    effectStyle = true;
+                    effectHoverStyle = true;
+                    effectActiveStyle= true;
+                    oneCSSSet();
+                    
                 }
+                
             });
             $(".buttonEffect").css("visibility","hidden");
             $(".buttonEffect").css("height","0px");
@@ -270,8 +423,15 @@
                 }else{
                     $(".buttonEffect").css("visibility","visible");
                     $(".buttonEffect").css("height","auto");
-                    effectStyle = true;
+                    $(".effectHoverStyle").css("visibility","visible");
+                    $(".effectHoverStyle").css("height","auto");
+                    
+                    buttonOutSet = true;
+                    buttonInSet = true;
+                    effectActiveStyle= true;
+                    oneCSSSet();
                 }
+                
             });
             
             $(".hoverStyle").click(function(){
@@ -282,8 +442,14 @@
                 }else{
                     $(".effectHoverStyle").css("visibility","visible");
                     $(".effectHoverStyle").css("height","auto");
-                    effectHoverStyle = true;
+                    
+                    buttonOutSet = true;
+                    buttonInSet = true;
+                    effectActiveStyle= true;
+                    oneCSSSet();
+                    
                 }
+                
             });
             $(".effectActiveStyle").css("visibility","hidden");
             $(".effectActiveStyle").css("height","0px");
@@ -295,8 +461,13 @@
                 }else{
                     $(".effectActiveStyle").css("visibility","visible");
                     $(".effectActiveStyle").css("height","auto");
-                    effectActiveStyle = true;
+                    
+                    buttonInSet = true;
+                    buttonOutSet = true;
+                    effectHoverStyle = true;
+                    oneCSSSet();
                 }
+                
             });
 
             $(".buttonSent").click(function(){
@@ -398,12 +569,88 @@
                     $('.buttonResult').css("font-size",wordSize+"px");
                     $('.buttonResult').css("color",wordColor);
                 });
+                HTML='<input type="button" class="buttonSet" value="'+buttonWord+'">';
 
+                CSS='.buttonSet{\n'+
+                    '\twidth: '+widthSet+'px;\n'+
+                    '\theight: '+heightSet+'px;\n'+
+                    '\tbborder-style: solid;\n'+
+                    '\tborder-width: 1px;\n'+
+                    '\tborder-color: '+borderColor+';\n'+
+                    '\tbackground: '+backgroundColor+';\n'+
+                    '\tfont-size: '+wordSize+'px;\n'+
+                    '\tcolor: '+wordColor+';\n'+
+                    '\tfont-family: '+wordStyle+';\n'+
+                    '\tborder-radius: '+radiusSet+'px;\n'+
+                    '}\n';
+                CSS+='.buttonSet:hover{\n'+
+                    '\twidth: '+widthHoverSet+'px;\n'+
+                    '\theight: '+heightHoverSet+'px;\n'+
+                    '\tborder-color: '+borderHoverEffect+';\n'+
+                    '\tbackground: '+backgroundColorHover+';\n'+
+                    '\tfont-size: '+wordSizeHover+'px;\n'+
+                    '\tcolor: '+wordColorHover+';\n'+
+                    '}\n';
+                CSS+='.buttonSet:active{\n'+
+                    '\twidth: '+widthActiveSet+'px;\n'+
+                    '\theight: '+heightActiveSet+'px;\n'+
+                    '\tborder-color: '+borderColorActive+';\n'+
+                    '\tbackground: '+backgroundColorActive+';\n'+
+                    '\tfont-size: '+wordSizeActive+'px;\n'+
+                    '\tcolor: '+wordColorActive+';\n'+
+                    '}\n';
                 
+                $(".codeHTMLText").val(HTML);
+                $(".codeCSSText").val(CSS);
 
-                
+
 
             });
+            $(".buttonReset").click(function(){
+                window.location.reload();
+            });
+            $(".buttonSame1").click(function(){
+                //框設置
+                var widthSet=$('input[name=widthSet]').val();
+                var heightSet=$('input[name=heightSet]').val();
+                var borderColor=$('input[name=borderColor]').val();
+                var backgroundColor=$('input[name=backgroundColor]').val();
+                
+                //文字設置
+                var wordSize=$('input[name=wordSize]').val();
+                var wordColor=$('input[name=wordColor]').val();
+
+                //hover
+                $('input[name=widthHoverSet]').val(widthSet);
+                $('input[name=heightHoverSet]').val(heightSet);
+                $('input[name=borderHoverEffect]').val(borderColor);
+                $('input[name=backgroundColorHover]').val(backgroundColor);
+                $('input[name=wordSizeHover]').val(wordSize);
+                $('input[name=wordColorHover]').val(wordColor);
+            });
+            $(".buttonSame2").click(function(){
+                //框設置
+                var widthSet=$('input[name=widthSet]').val();
+                var heightSet=$('input[name=heightSet]').val();
+                var borderColor=$('input[name=borderColor]').val();
+                var backgroundColor=$('input[name=backgroundColor]').val();
+                
+                //文字設置
+                var wordSize=$('input[name=wordSize]').val();
+                var wordColor=$('input[name=wordColor]').val();
+
+                //hover
+                $('input[name=widthActiveSet]').val(widthSet);
+                $('input[name=heightActiveSet]').val(heightSet);
+                $('input[name=borderColorActive]').val(borderColor);
+                $('input[name=backgroundColorActive]').val(backgroundColor);
+                $('input[name=wordSizeActive]').val(wordSize);
+                $('input[name=wordColorActive]').val(wordColor);
+            });
+            
+
+
+
 
 
 
