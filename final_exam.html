@@ -20,6 +20,22 @@
 
             }
             
+            .test{
+                font-family: 'Noto Color Emoji', sans-serif;
+            }
+            .buttonOutSet{
+                border: solid 1px #88DDFF;
+                margin: 5px;
+            }
+            .buttonInSet{
+                border: solid 1px #AA11FF;
+                margin: 5px;
+            }
+            .buttonEffect{
+                border: solid 1px #88DDFF;
+                margin: 5px;
+            }
+            
 
         </style>
     </head>
@@ -28,11 +44,81 @@
         <h3>自行決定想要的button樣式</h3>
         
         <div class="cssSet">
-            寬度：<input type="number" name="widthSet">
+            <p class="buttonBackground">按鈕背景、尺寸、邊框</p>
+            <div class="buttonOutSet">
+                寬度：<input type="number" name="widthSet" style="width: 50px;">px
+                <br>
+                高度：<input type="number" name="heightSet" style="width: 50px;">px
+                <br>
+                邊框顏色：<input type="color" name="borderColor" value="#ff0000" style="width: 30px;"/>
+                <br>
+                背景顏色：<input type="color" name="backgroundColor" value="#000000" style="width: 30px;"/>
+                <br>
+                邊框圓角：<input type="number" name="radiusSet" style="width: 50px;">px
+                <br>
+
+            </div>
+            <p>文字設定</p>
+            <div class="buttonInSet">
+                按鈕文字：<input type="text" name="buttonWord" style="width: 100px;">
+                <br>
+                字型：<select name="wordStyle">
+                        <option value="DFKai-SB">標楷體</option>
+                        <option value="MingLiU">細明體</option>
+                        <option value="PMingLiU">新細明體</option>
+                        <option value="Microsoft_JhengHei">微軟正黑體</option>
+                        <option value="Comic_Sans_MS">Comic Sans MS</option>
+                    </select>
+                <br>
+                字體大小：<input type="number" name="wordSize" value="12" style="width: 50px;">px
+                <br>
+                字體顏色：<input type="color" name="wordColor" value="#FFFFFF" style="width: 30px;"/>px
+
+            </div>
+            <p>特效</p>
+            <div class="buttonEffect">
+                <div class="buttonOutEffectSet">
+                    寬度：<input type="number" name="widthEffectSet" style="width: 50px;">px
+                    <br>
+                    高度：<input type="number" name="heightEffectSet" style="width: 50px;">px
+                    <br>
+                    邊框顏色：<input type="color" name="borderColorEffect" value="#ff0000" style="width: 30px;"/>
+                    <br>
+                    背景顏色：<input type="color" name="backgroundColorEffect" value="#000000" style="width: 30px;"/>
+                    <br>
+                    邊框圓角：<input type="number" name="radiusEffectSet" style="width: 50px;">px
+                    <br>
+                </div>
+                <div class="buttonInEffectSet">
+                    按鈕文字：<input type="text" name="buttonWordEffect" style="width: 100px;">
+                    <br>
+                    字型：<select name="wordStyleEffect">
+                            <option value="DFKai-SB">標楷體</option>
+                            <option value="MingLiU">細明體</option>
+                            <option value="PMingLiU">新細明體</option>
+                            <option value="Microsoft_JhengHei">微軟正黑體</option>
+                            <option value="Comic_Sans_MS">Comic Sans MS</option>
+                        </select>
+                    <br>
+                    字體大小：<input type="number" name="wordSizeEffect" value="12" style="width: 50px;">px
+                    <br>
+                    字體顏色：<input type="color" name="wordColorEffect" value="#FFFFFF" style="width: 30px;"/>px
+
+                </div>
+                
+
+            </div>
+
+
+
+            
+            
+
             <br>
-            高度：<input type="number" name="heightSet">
-            <br>
-            透明度<input type="range" min="0" max="100" step="1" value="50">
+
+
+
+            <p class="test">歆abcABC123楊麗芳😊🫢</p>
 
 
         </div>
@@ -45,6 +131,16 @@
         
         <script src="jquery.js"></script>
         <script type="text/javascript">
+            var buttonOutSet = true;
+            $(".buttonBackground").click(function(){
+                if(buttonOutSet){
+                    $(".buttonOutSet").css("visibility","hidden");
+                    buttonOutSet = false;
+                }else{
+                    $(".buttonOutSet").css("visibility","visible");
+                    buttonOutSet = true;
+                }
+            });
             
         </script>
             
