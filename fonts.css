@@ -1,112 +1,252 @@
 /* 定義 ChenYuluoyan 字體 */
-  @font-face {
-    font-family: 'ChenYuluoyan';
-    src: url('fonts/ChenYuluoyan/ChenYuluoyan-Thin-Monospaced.ttf') format('truetype'),
-         url('fonts/ChenYuluoyan/ChenYuluoyan-Thin.ttf') format('truetype');
-  }
+@font-face {
+  font-family: 'ChenYuluoyan-Thin-Monospaced';
+  src: url('fonts/ChenYuluoyan/ChenYuluoyan-Thin-Monospaced.ttf') format('truetype');
+}
 
-  /* 定義 Cubic_11 字體 */
-  @font-face {
-    font-family: 'Cubic_11';
-    src: url('fonts/Cubic_11/Cubic_11.ttf') format('truetype');
-  }
+@font-face {
+  font-family: 'ChenYuluoyan-Thin';
+  src: url('fonts/ChenYuluoyan/ChenYuluoyan-Thin.ttf') format('truetype');
+}
 
-  /* 定義 GenSenRounded 字體 */
-  @font-face {
-    font-family: 'GenSenRounded';
-    src: url('fonts/GenSenRounded/GenSenRounded-B.ttc') format('truetype'),
-         url('fonts/GenSenRounded/GenSenRounded-EL.ttc') format('truetype'),
-         url('fonts/GenSenRounded/GenSenRounded-H.ttc') format('truetype'),
-         url('fonts/GenSenRounded/GenSenRounded-L.ttc') format('truetype'),
-         url('fonts/GenSenRounded/GenSenRounded-M.ttc') format('truetype'),
-         url('fonts/GenSenRounded/GenSenRounded-R.ttc') format('truetype');
-  }
+/* 定義 Cubic_11 字體 */
+@font-face {
+  font-family: 'Cubic_11';
+  src: url('fonts/Cubic_11/Cubic_11.ttf') format('truetype');
+}
 
-  /* 定義 HANA 字體 */
-  @font-face {
-    font-family: 'HANA';
-    src: url('fonts/HANA/B2Hana-Medium.ttf') format('truetype'),
-         url('fonts/HANA/B2Hana-Regular-Lite.ttf') format('truetype'),
-         url('fonts/HANA/B2Hana-Regular.ttf') format('truetype'),
-         url('fonts/HANA/B2HanaB-Medium.ttf') format('truetype'),
-         url('fonts/HANA/B2HanaB-Regular.ttf') format('truetype'),
-         url('fonts/HANA/HanaMeatball-Medium.ttf') format('truetype'),
-         url('fonts/HANA/HanaMeatball-Regular-Lite.ttf') format('truetype'),
-         url('fonts/HANA/HanaMeatball-Regular.ttf') format('truetype'),
-         url('fonts/HANA/HanaMeatballB-Regular.ttf') format('truetype'),
-         url('fonts/HANA/HanaMinA.ttf') format('truetype'),
-         url('fonts/HANA/HanaMinB.ttf') format('truetype');
-  }
+/* 定義 GenSenRounded 字體 */
+@font-face {
+  font-family: 'GenSenRounded-B';
+  src: url('fonts/GenSenRounded/GenSenRounded-B.ttc') format('truetype');
+}
 
-  /* 定義 Iansui 字體 */
-  @font-face {
-    font-family: 'Iansui';
-    src: url('fonts/Iansui/Iansui-Regular.ttf') format('truetype');
-  }
+@font-face {
+  font-family: 'GenSenRounded-EL';
+  src: url('fonts/GenSenRounded/GenSenRounded-EL.ttc') format('truetype');
+}
 
-  /* 定義 jf-openhuninn 字體 */
-  @font-face {
-    font-family: 'jf-openhuninn';
-    src: url('fonts/jf-openhuninn/jf-openhuninn-2.0.ttf') format('truetype');
-  }
+@font-face {
+  font-family: 'GenSenRounded-H';
+  src: url('fonts/GenSenRounded/GenSenRounded-H.ttc') format('truetype');
+}
 
-  /* 定義 NotoSansTC 字體 */
-  @font-face {
-    font-family: 'NotoSansTC';
-    src: url('fonts/NotoSansTC/NotoSansTC-Black.otf') format('opentype'),
-         url('fonts/NotoSansTC/NotoSansTC-Bold.otf') format('opentype'),
-         url('fonts/NotoSansTC/NotoSansTC-Light.otf') format('opentype'),
-         url('fonts/NotoSansTC/NotoSansTC-Medium.otf') format('opentype'),
-         url('fonts/NotoSansTC/NotoSansTC-Regular.otf') format('opentype'),
-         url('fonts/NotoSansTC/NotoSansTC-Thin.otf') format('opentype');
-  }
+@font-face {
+  font-family: 'GenSenRounded-L';
+  src: url('fonts/GenSenRounded/GenSenRounded-L.ttc') format('truetype');
+}
 
-  /* 定義 NotoSerifTC 字體 */
-  @font-face {
-    font-family: 'NotoSerifTC';
-    src: url('fonts/NotoSerifTC/NotoSerifTC-Black.otf') format('opentype'),
-         url('fonts/NotoSerifTC/NotoSerifTC-Bold.otf') format('opentype'),
-         url('fonts/NotoSerifTC/NotoSerifTC-ExtraLight.otf') format('opentype'),
-         url('fonts/NotoSerifTC/NotoSerifTC-Light.otf') format('opentype'),
-         url('fonts/NotoSerifTC/NotoSerifTC-Medium.otf') format('opentype'),
-         url('fonts/NotoSerifTC/NotoSerifTC-Regular.otf') format('opentype'),
-         url('fonts/NotoSerifTC/NotoSerifTC-SemiBold.otf') format('opentype');
-  }
+@font-face {
+  font-family: 'GenSenRounded-M';
+  src: url('fonts/GenSenRounded/GenSenRounded-M.ttc') format('truetype');
+}
 
-  /* 定義 ThePeakFont 字體 */
-  @font-face {
-    font-family: 'ThePeakFont';
-    src: url('fonts/ThePeakFont/ThePeakFontBeta_V0_101.ttf') format('truetype');
-  }
+@font-face {
+  font-family: 'GenSenRounded-R';
+  src: url('fonts/GenSenRounded/GenSenRounded-R.ttc') format('truetype');
+}
 
-  /* 定義 WD-XLLubrifont 字體 */
-  @font-face {
-    font-family: 'WD-XLLubrifont';
-    src: url('fonts/WD-XLLubrifont/WD-XLLubrifontTC-Regular.otf') format('opentype');
-  }
+/* 定義 HANA 字體 */
+@font-face {
+  font-family: 'HANA-B2Hana-Medium';
+  src: url('fonts/HANA/B2Hana-Medium.ttf') format('truetype');
+}
 
-  /* 定義 Xiaolai 字體 */
-  @font-face {
-    font-family: 'Xiaolai';
-    src: url('fonts/Xiaolai/XiaolaiSC-RegularMono.ttf') format('truetype'),
-         url('fonts/Xiaolai/XiaolaiSC-Regular.ttf') format('truetype');
-  }
+@font-face {
+  font-family: 'HANA-B2Hana-Regular-Lite';
+  src: url('fonts/HANA/B2Hana-Regular-Lite.ttf') format('truetype');
+}
 
-  /* 定義 Yozai 字體 */
-  @font-face {
-    font-family: 'Yozai';
-    src: url('fonts/Yozai/Yozai-Bold.ttf') format('truetype'),
-         url('fonts/Yozai/Yozai-Light.ttf') format('truetype'),
-         url('fonts/Yozai/Yozai-Medium.ttf') format('truetype'),
-         url('fonts/Yozai/Yozai-Regular.ttf') format('truetype');
-  }
+@font-face {
+  font-family: 'HANA-B2Hana-Regular';
+  src: url('fonts/HANA/B2Hana-Regular.ttf') format('truetype');
+}
 
-  /* 定義 YuPearl 字體 */
-  @font-face {
-    font-family: 'YuPearl';
-    src: url('fonts/YuPearl/YuPearl-ExtraLight.ttf') format('truetype'),
-         url('fonts/YuPearl/YuPearl-Light.ttf') format('truetype'),
-         url('fonts/YuPearl/YuPearl-Medium.ttf') format('truetype'),
-         url('fonts/YuPearl/YuPearl-Regular.ttf') format('truetype'),
-         url('fonts/YuPearl/YuPearl-SemiBold.ttf') format('truetype');
-  }
+@font-face {
+  font-family: 'HANA-B2HanaB-Medium';
+  src: url('fonts/HANA/B2HanaB-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HANA-B2HanaB-Regular';
+  src: url('fonts/HANA/B2HanaB-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HANA-HanaMeatball-Medium';
+  src: url('fonts/HANA/HanaMeatball-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HANA-HanaMeatball-Regular-Lite';
+  src: url('fonts/HANA/HanaMeatball-Regular-Lite.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HANA-HanaMeatball-Regular';
+  src: url('fonts/HANA/HanaMeatball-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HANA-HanaMeatballB-Regular';
+  src: url('fonts/HANA/HanaMeatballB-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HANA-HanaMinA';
+  src: url('fonts/HANA/HanaMinA.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'HANA-HanaMinB';
+  src: url('fonts/HANA/HanaMinB.ttf') format('truetype');
+}
+
+/* 定義 Iansui 字體 */
+@font-face {
+  font-family: 'Iansui';
+  src: url('fonts/Iansui/Iansui-Regular.ttf') format('truetype');
+}
+
+/* 定義 jf-openhuninn 字體 */
+@font-face {
+  font-family: 'jf-openhuninn';
+  src: url('fonts/jf-openhuninn/jf-openhuninn-2.0.ttf') format('truetype');
+}
+
+/* 定義 NotoSansTC 字體 */
+@font-face {
+  font-family: 'NotoSansTC-Black';
+  src: url('fonts/NotoSansTC/NotoSansTC-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSansTC-Bold';
+  src: url('fonts/NotoSansTC/NotoSansTC-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSansTC-Light';
+  src: url('fonts/NotoSansTC/NotoSansTC-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSansTC-Medium';
+  src: url('fonts/NotoSansTC/NotoSansTC-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSansTC-Regular';
+  src: url('fonts/NotoSansTC/NotoSansTC-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSansTC-Thin';
+  src: url('fonts/NotoSansTC/NotoSansTC-Thin.otf') format('opentype');
+}
+
+/* 定義 NotoSerifTC 字體 */
+@font-face {
+  font-family: 'NotoSerifTC-Black';
+  src: url('fonts/NotoSerifTC/NotoSerifTC-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSerifTC-Bold';
+  src: url('fonts/NotoSerifTC/NotoSerifTC-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSerifTC-ExtraLight';
+  src: url('fonts/NotoSerifTC/NotoSerifTC-ExtraLight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSerifTC-Light';
+  src: url('fonts/NotoSerifTC/NotoSerifTC-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSerifTC-Medium';
+  src: url('fonts/NotoSerifTC/NotoSerifTC-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSerifTC-Regular';
+  src: url('fonts/NotoSerifTC/NotoSerifTC-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSerifTC-SemiBold';
+  src: url('fonts/NotoSerifTC/NotoSerifTC-SemiBold.otf') format('opentype');
+}
+
+/* 定義 ThePeakFont 字體 */
+@font-face {
+  font-family: 'ThePeakFont';
+  src: url('fonts/ThePeakFont/ThePeakFontBeta_V0_101.ttf') format('truetype');
+}
+
+/* 定義 WD-XLLubrifont 字體 */
+@font-face {
+  font-family: 'WD-XLLubrifont';
+  src: url('fonts/WD-XLLubrifont/WD-XLLubrifontTC-Regular.otf') format('opentype');
+}
+
+/* 定義 Xiaolai 字體 */
+@font-face {
+  font-family: 'Xiaolai-RegularMono';
+  src: url('fonts/Xiaolai/XiaolaiSC-RegularMono.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Xiaolai-Regular';
+  src: url('fonts/Xiaolai/XiaolaiSC-Regular.ttf') format('truetype');
+}
+
+/* 定義 Yozai 字體 */
+@font-face {
+  font-family: 'Yozai-Bold';
+  src: url('fonts/Yozai/Yozai-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Yozai-Light';
+  src: url('fonts/Yozai/Yozai-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Yozai-Medium';
+  src: url('fonts/Yozai/Yozai-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Yozai-Regular';
+  src: url('fonts/Yozai/Yozai-Regular.ttf') format('truetype');
+}
+
+/* 定義 YuPearl 字體 */
+@font-face {
+  font-family: 'YuPearl-ExtraLight';
+  src: url('fonts/YuPearl/YuPearl-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YuPearl-Light';
+  src: url('fonts/YuPearl/YuPearl-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YuPearl-Medium';
+  src: url('fonts/YuPearl/YuPearl-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YuPearl-Regular';
+  src: url('fonts/YuPearl/YuPearl-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YuPearl-SemiBold';
+  src: url('fonts/YuPearl/YuPearl-SemiBold.ttf') format('truetype');
+}
