@@ -24,10 +24,7 @@
                 margin-top: -5px;
                 background: #FFFFFF;
             }
-            
-            .test{
-                font-family: 'Noto Color Emoji', sans-serif;
-            }
+
             .buttonOutSet{
                 border: solid 1px #88DDFF;
                 margin: 5px;
@@ -47,14 +44,17 @@
             .windowsRight{
                 float: left;
                 width: 30%;
+                height: 100%;
 
             }
             .cssResult{
-                border: solid 1px #8800FF;
+                /*border: solid 1px #8800FF;*/
                 border-radius: 20px;
                 padding: 10px;
                 line-height:30px;
                 text-align: center;
+                height: 100%;
+                margin-left: 10px;
             }
             .buttonResult{
                 width: 100px;
@@ -67,6 +67,17 @@
                 color: #000000;
 
             }
+            .windows{
+                display: flex;
+                align-items: center;
+            }
+            .textResult{
+                text-align: left;
+                font-size: 20px;
+            }
+            .buttonEffect div{
+                margin-bottom: 5px;
+            }
             
 
         </style>
@@ -74,185 +85,133 @@
     <body>
         <h1>Button 生成器</h1>
         <h3>自行決定想要的button樣式</h3>
-        
-        <div class="windowsLeft">
-            <div class="cssSet">
-                <p class="buttonBackgroundStyle">按鈕背景、尺寸、邊框</p>
-                <div class="buttonOutSet">
-                    寬度：<input type="number" name="widthSet" style="width: 50px;" value="100">px
-                    <br>
-                    高度：<input type="number" name="heightSet" style="width: 50px;" value="30">px
-                    <br>
-                    邊框顏色：<input type="color" name="borderColor" value="#000000" style="width: 30px;" />
-                    <br>
-                    背景顏色：<input type="color" name="backgroundColor" value="#DDDDDD" style="width: 30px;"/>
-                    <br>
-                    邊框圓角：<input type="number" name="radiusSet" style="width: 50px;" value="0">px
-                    <br>
+        <div class="windows">
+            <div class="windowsLeft">
+                <div class="cssSet">
+                    <p class="buttonBackgroundStyle">按鈕背景、尺寸、邊框</p>
+                    <div class="buttonOutSet">
+                        寬度：<input type="number" name="widthSet" style="width: 50px;" value="100">px
+                        <br>
+                        高度：<input type="number" name="heightSet" style="width: 50px;" value="30">px
+                        <br>
+                        邊框顏色：<input type="color" name="borderColor" value="#000000" style="width: 30px;" />
+                        <br>
+                        背景顏色：<input type="color" name="backgroundColor" value="#DDDDDD" style="width: 30px;"/>
+                        <br>
+                        邊框圓角：<input type="number" name="radiusSet" style="width: 50px;" value="0">px
+                        <br>
 
-                </div>
-                <p class="wordSetStyle">文字設定</p>
-                <div class="buttonInSet">
-                    按鈕文字：<input type="text" name="buttonWord" style="width: 100px;" value="Button">
-                    <br>
-                    字型：<select name="wordStyle" >
-                        <option value="DFKai-SB">標楷體</option>
-                        <option value="MingLiU">細明體</option>
-                        <option value="PMingLiU">新細明體</option>
-                        <option value="Microsoft_JhengHei">微軟正黑體</option>
-                        <option value="Comic_Sans_MS">Comic Sans MS</option>
-                        <option value="ChenYuluoyan-Thin-Monospaced">ChenYuluoyan Thin Monospaced</option>
-                        <option value="ChenYuluoyan-Thin">ChenYuluoyan Thin</option>
-                        <option value="Cubic_11">Cubic_11</option>
-                        <option value="GenSenRounded-B">GenSenRounded_B</option>
-                        <option value="GenSenRounded-EL">GenSenRounded_EL</option>
-                        <option value="GenSenRounded-H">GenSenRounded_H</option>
-                        <option value="GenSenRounded-L">GenSenRounded_L</option>
-                        <option value="GenSenRounded-M">GenSenRounded_M</option>
-                        <option value="GenSenRounded-R">GenSenRounded_R</option>
-                        <option value="B2Hana-Medium">B2Hana_Medium</option>
-                        <option value="B2Hana-Regular-Lite">B2Hana_Regular_Lite</option>
-                        <option value="B2Hana-Regular">B2Hana_Regular</option>
-                        <option value="B2HanaB-Medium">B2HanaB_Medium</option>
-                        <option value="B2HanaB-Regular">B2HanaB_Regular</option>
-                        <option value="HanaMeatball-Medium">HanaMeatball_Medium</option>
-                        <option value="HanaMeatball-Regular-Lite">HanaMeatball_Regular_Lite</option>
-                        <option value="HanaMeatball-Regular">HanaMeatball Regular</option>
-                        <option value="HanaMeatballB-Regular">HanaMeatballB Regular</option>
-                        <option value="HanaMinA">HanaMinA</option>
-                        <option value="HanaMinB">HanaMinB</option>
-                        <option value="Iansui-Regular">Iansui Regular</option>
-                        <option value="jf-openhuninn-2.0">jf-openhuninn 2.0</option>
-                        <option value="NotoSansTC-Black">NotoSansTC Black</option>
-                        <option value="NotoSansTC-Bold">NotoSansTC Bold</option>
-                        <option value="NotoSansTC-Light">NotoSansTC Light</option>
-                        <option value="NotoSansTC-Medium">NotoSansTC Medium</option>
-                        <option value="NotoSansTC-Regular">NotoSansTC Regular</option>
-                        <option value="NotoSansTC-Thin">NotoSansTC Thin</option>
-                        <option value="NotoSerifTC-Black">NotoSerifTC Black</option>
-                        <option value="NotoSerifTC-Bold">NotoSerifTC Bold</option>
-                        <option value="NotoSerifTC-ExtraLight">NotoSerifTC ExtraLight</option>
-                        <option value="NotoSerifTC-Light">NotoSerifTC Light</option>
-                        <option value="NotoSerifTC-Medium">NotoSerifTC Medium</option>
-                        <option value="NotoSerifTC-Regular">NotoSerifTC Regular</option>
-                        <option value="NotoSerifTC-SemiBold">NotoSerifTC SemiBold</option>
-                        <option value="ThePeakFontBeta_V0_101">ThePeakFontBeta V0 101</option>
-                        <option value="WD-XLLubrifontTC-Regular">WD-XLLubrifontTC Regular</option>
-                        <option value="XiaolaiSC-RegularMono">XiaolaiMonoSC Regular</option>
-                        <option value="XiaolaiSC-Regular">XiaolaiSC Regular</option>
-                        <option value="Yozai-Bold">Yozai Bold</option>
-                        <option value="Yozai-Light">Yozai Light</option>
-                        <option value="Yozai-Medium">Yozai Medium</option>
-                        <option value="Yozai-Regular">Yozai Regular</option>
-                        <option value="YuPearl-ExtraLight">YuPearl ExtraLight</option>
-                        <option value="YuPearl-Light">YuPearl Light</option>
-                        <option value="YuPearl-Medium">YuPearl Medium</option>
-                        <option value="YuPearl-Regular">YuPearl Regular</option>
-                        <option value="YuPearl-SemiBold">YuPearl SemiBold</option>
-                        </select>
-                    <br>
-                    字體大小：<input type="number" name="wordSize" value="12" style="width: 50px;" value="12">px
-                    <br>
-                    字體顏色：<input type="color" name="wordColor" value="#000000" style="width: 30px;"/>px
-
-                </div>
-                <p class="effectStyle">特效</p>
-                <div class="buttonEffect">
-                    <div class="buttonOutEffectSet">
-                        寬度：<input type="number" name="widthEffectSet" style="width: 50px;">px
-                        <br>
-                        高度：<input type="number" name="heightEffectSet" style="width: 50px;">px
-                        <br>
-                        邊框顏色：<input type="color" name="borderColorEffect" value="#ff0000" style="width: 30px;"/>
-                        <br>
-                        背景顏色：<input type="color" name="backgroundColorEffect" value="#000000" style="width: 30px;"/>
-                        <br>
-                        邊框圓角：<input type="number" name="radiusEffectSet" style="width: 50px;">px
-                        <br>
                     </div>
-                    <div class="buttonInEffectSet">
-                        按鈕文字：<input type="text" name="buttonWordEffect" style="width: 100px;">
+                    <p class="wordSetStyle">文字設定</p>
+                    <div class="buttonInSet">
+                        按鈕文字：<input type="text" name="buttonWord" style="width: 100px;" value="Button">
                         <br>
-                        字型：<select name="wordStyleEffect">
-                            <option value="DFKai-SB">標楷體</option>
-                            <option value="MingLiU">細明體</option>
-                            <option value="PMingLiU">新細明體</option>
-                            <option value="Microsoft_JhengHei">微軟正黑體</option>
-                            <option value="Comic_Sans_MS">Comic Sans MS</option>
-                            <option value="ChenYuluoyan-Thin-Monospaced">ChenYuluoyan Thin Monospaced</option>
-                            <option value="ChenYuluoyan-Thin">ChenYuluoyan Thin</option>
-                            <option value="Cubic_11">Cubic_11</option>
-                            <option value="GenSenRounded-B">GenSenRounded_B</option>
-                            <option value="GenSenRounded-EL">GenSenRounded_EL</option>
-                            <option value="GenSenRounded-H">GenSenRounded_H</option>
-                            <option value="GenSenRounded-L">GenSenRounded_L</option>
-                            <option value="GenSenRounded-M">GenSenRounded_M</option>
-                            <option value="GenSenRounded-R">GenSenRounded_R</option>
-                            <option value="B2Hana-Medium">B2Hana_Medium</option>
-                            <option value="B2Hana-Regular-Lite">B2Hana_Regular_Lite</option>
-                            <option value="B2Hana-Regular">B2Hana_Regular</option>
-                            <option value="B2HanaB-Medium">B2HanaB_Medium</option>
-                            <option value="B2HanaB-Regular">B2HanaB_Regular</option>
-                            <option value="HanaMeatball-Medium">HanaMeatball_Medium</option>
-                            <option value="HanaMeatball-Regular-Lite">HanaMeatball_Regular_Lite</option>
-                            <option value="HanaMeatball-Regular">HanaMeatball Regular</option>
-                            <option value="HanaMeatballB-Regular">HanaMeatballB Regular</option>
-                            <option value="HanaMinA">HanaMinA</option>
-                            <option value="HanaMinB">HanaMinB</option>
-                            <option value="Iansui-Regular">Iansui Regular</option>
-                            <option value="jf-openhuninn-2.0">jf-openhuninn 2.0</option>
-                            <option value="NotoSansTC-Black">NotoSansTC Black</option>
-                            <option value="NotoSansTC-Bold">NotoSansTC Bold</option>
-                            <option value="NotoSansTC-Light">NotoSansTC Light</option>
-                            <option value="NotoSansTC-Medium">NotoSansTC Medium</option>
-                            <option value="NotoSansTC-Regular">NotoSansTC Regular</option>
-                            <option value="NotoSansTC-Thin">NotoSansTC Thin</option>
-                            <option value="NotoSerifTC-Black">NotoSerifTC Black</option>
-                            <option value="NotoSerifTC-Bold">NotoSerifTC Bold</option>
-                            <option value="NotoSerifTC-ExtraLight">NotoSerifTC ExtraLight</option>
-                            <option value="NotoSerifTC-Light">NotoSerifTC Light</option>
-                            <option value="NotoSerifTC-Medium">NotoSerifTC Medium</option>
-                            <option value="NotoSerifTC-Regular">NotoSerifTC Regular</option>
-                            <option value="NotoSerifTC-SemiBold">NotoSerifTC SemiBold</option>
-                            <option value="ThePeakFontBeta_V0_101">ThePeakFontBeta V0 101</option>
-                            <option value="WD-XLLubrifontTC-Regular">WD-XLLubrifontTC Regular</option>
-                            <option value="XiaolaiSC-RegularMono">XiaolaiMonoSC Regular</option>
-                            <option value="XiaolaiSC-Regular">XiaolaiSC Regular</option>
-                            <option value="Yozai-Bold">Yozai Bold</option>
-                            <option value="Yozai-Light">Yozai Light</option>
-                            <option value="Yozai-Medium">Yozai Medium</option>
-                            <option value="Yozai-Regular">Yozai Regular</option>
-                            <option value="YuPearl-ExtraLight">YuPearl ExtraLight</option>
-                            <option value="YuPearl-Light">YuPearl Light</option>
-                            <option value="YuPearl-Medium">YuPearl Medium</option>
-                            <option value="YuPearl-Regular">YuPearl Regular</option>
-                            <option value="YuPearl-SemiBold">YuPearl SemiBold</option>
+                        字型：<select name="wordStyle" >
+                                <option value="DFKai-SB">標楷體</option>
+                                <option value="MingLiU">細明體</option>
+                                <option value="PMingLiU">新細明體</option>
+                                <option value="Microsoft_JhengHei">微軟正黑體</option>
+                                <option value="Comic_Sans_MS">Comic Sans MS</option>
+                                <option value="ChenYuluoyan-Thin-Monospaced">ChenYuluoyan Thin Monospaced</option>
+                                <option value="ChenYuluoyan-Thin">ChenYuluoyan Thin</option>
+                                <option value="Cubic_11">Cubic_11</option>
+                                <option value="GenSenRounded">GenSenRounded</option>
+                                <option value="GenSenRounded-EL">GenSenRounded_EL</option>
+                                <option value="GenSenRounded-H">GenSenRounded_H</option>
+                                <option value="GenSenRounded-L">GenSenRounded_L</option>
+                                <option value="GenSenRounded-M">GenSenRounded_M</option>
+                                <option value="GenSenRounded-R">GenSenRounded_R</option>
+                                <option value="B2Hana-Medium">B2Hana_Medium</option>
+                                <option value="B2Hana-Regular-Lite">B2Hana_Regular_Lite</option>
+                                <option value="B2Hana-Regular">B2Hana_Regular</option>
+                                <option value="B2HanaB-Medium">B2HanaB_Medium</option>
+                                <option value="B2HanaB-Regular">B2HanaB_Regular</option>
+                                <option value="HanaMeatball-Medium">HanaMeatball_Medium</option>
+                                <option value="HanaMeatball-Regular-Lite">HanaMeatball_Regular_Lite</option>
+                                <option value="HanaMeatball-Regular">HanaMeatball Regular</option>
+                                <option value="HanaMeatballB-Regular">HanaMeatballB Regular</option>
+                                <option value="HanaMinA">HanaMinA</option>
+                                <option value="HanaMinB">HanaMinB</option>
+                                <option value="Iansui-Regular">Iansui Regular</option>
+                                <option value="jf-openhuninn-2.0">jf-openhuninn 2.0</option>
+                                <option value="NotoSansTC-Black">NotoSansTC Black</option>
+                                <option value="NotoSansTC-Bold">NotoSansTC Bold</option>
+                                <option value="NotoSansTC-Light">NotoSansTC Light</option>
+                                <option value="NotoSansTC-Medium">NotoSansTC Medium</option>
+                                <option value="NotoSansTC-Regular">NotoSansTC Regular</option>
+                                <option value="NotoSansTC-Thin">NotoSansTC Thin</option>
+                                <option value="NotoSerifTC-Black">NotoSerifTC Black</option>
+                                <option value="NotoSerifTC-Bold">NotoSerifTC Bold</option>
+                                <option value="NotoSerifTC-ExtraLight">NotoSerifTC ExtraLight</option>
+                                <option value="NotoSerifTC-Light">NotoSerifTC Light</option>
+                                <option value="NotoSerifTC-Medium">NotoSerifTC Medium</option>
+                                <option value="NotoSerifTC-Regular">NotoSerifTC Regular</option>
+                                <option value="NotoSerifTC-SemiBold">NotoSerifTC SemiBold</option>
+                                <option value="ThePeakFontBeta_V0_101">ThePeakFontBeta V0 101</option>
+                                <option value="WD-XLLubrifontTC-Regular">WD-XLLubrifontTC Regular</option>
+                                <option value="XiaolaiSC-RegularMono">XiaolaiMonoSC Regular</option>
+                                <option value="XiaolaiSC-Regular">XiaolaiSC Regular</option>
+                                <option value="Yozai-Bold">Yozai Bold</option>
+                                <option value="Yozai-Light">Yozai Light</option>
+                                <option value="Yozai-Medium">Yozai Medium</option>
+                                <option value="Yozai-Regular">Yozai Regular</option>
+                                <option value="YuPearl-ExtraLight">YuPearl ExtraLight</option>
+                                <option value="YuPearl-Light">YuPearl Light</option>
+                                <option value="YuPearl-Medium">YuPearl Medium</option>
+                                <option value="YuPearl-SemiBold">YuPearl SemiBold</option>
                             </select>
                         <br>
-                        字體大小：<input type="number" name="wordSizeEffect" value="12" style="width: 50px;">px
+                        字體大小：<input type="number" name="wordSize" value="12" style="width: 50px;" value="12">px
                         <br>
-                        字體顏色：<input type="color" name="wordColorEffect" value="#FFFFFF" style="width: 30px;"/>px
+                        字體顏色：<input type="color" name="wordColor" value="#000000" style="width: 30px;"/>px
+
                     </div>
-                    
+                    <p class="effectStyle">特效</p>
+                    <div class="buttonEffect">
+                        <p class="hoverStyle">滑鼠移到上方時</p>
+                        <div class="effectHoverStyle">
+                            寬度：<input type="number" name="widthHoverSet" style="width: 50px;" value="100">px
+                            <br>
+                            高度：<input type="number" name="heightHoverSet" style="width: 50px;" value="30">px
+                            <br>
+                            邊框顏色：<input type="color" name="borderHoverEffect" value="#000000" style="width: 30px;"/>
+                            <br>
+                            背景顏色：<input type="color" name="backgroundColorHover" value="#DDDDDD" style="width: 30px;"/>
+                            <br>
+                            字體大小：<input type="number" name="wordSizeHover" value="12" style="width: 50px;">px
+                            <br>
+                            字體顏色：<input type="color" name="wordColorHover" value="#000000" style="width: 30px;"/>px
+                                
+                        </div>
+                        <p class="activeStyle">滑鼠點擊時</p>
+                        <div class="effectActiveStyle">
+                            寬度：<input type="number" name="widthActiveSet" style="width: 50px;" value="100">px
+                            <br>
+                            高度：<input type="number" name="heightActiveSet" style="width: 50px;" value="30">px
+                            <br>
+                            邊框顏色：<input type="color" name="borderColorActive" value="#000000" style="width: 30px;"/>
+                            <br>
+                            背景顏色：<input type="color" name="backgroundColorActive" value="#DDDDDD" style="width: 30px;"/>
+                            <br>
+                            字體大小：<input type="number" name="wordSizeActive" value="12" style="width: 50px;">px
+                            <br>
+                            字體顏色：<input type="color" name="wordColorActive" value="#000000" style="width: 30px;"/>px
+                        </div>
+
+                    </div>
+
+                    <input type="button" class="buttonSent" value="建立按鈕">
 
                 </div>
-
-                
-
-                <p class="test">歆abcABC123楊麗芳😊🫢</p>
-
-                <input type="button" class="buttonSent" value="建立按鈕">
+            </div>
+            <div class="windowsRight">
+                <div class="cssResult">
+                    <p class="textResult">結果顯示：</p>
+                    <input type="button" class="buttonResult" value="Button">
+                </div>
 
             </div>
-        </div>
-        <div class="windowsRight">
-            <div class="cssResult">
-            
-                <input type="button" class="buttonResult" value="Button">
-            </div>
-
-        </div>
-        
+        </div>        
 
 
         
@@ -261,6 +220,8 @@
             var buttonOutSet = true;
             var buttonInSet = false;
             var effectStyle = false;
+            var effectHoverStyle = true;
+            var effectActiveStyle= false;
             
             $(".buttonOutSet").css("visibility","visible");
             $(".buttonBackgroundStyle").click(function(){
@@ -295,12 +256,44 @@
                     $(".buttonEffect").css("visibility","hidden");
                     $(".buttonEffect").css("height","0px");
                     effectStyle = false;
+                    $(".effectHoverStyle").css("visibility","hidden");
+                    $(".effectHoverStyle").css("height","0px");
+                    effectHoverStyle = false;
+                    $(".effectActiveStyle").css("visibility","hidden");
+                    $(".effectActiveStyle").css("height","0px");
+                    effectActiveStyle = false;
                 }else{
                     $(".buttonEffect").css("visibility","visible");
                     $(".buttonEffect").css("height","auto");
                     effectStyle = true;
                 }
             });
+            
+            $(".hoverStyle").click(function(){
+                if(effectHoverStyle){
+                    $(".effectHoverStyle").css("visibility","hidden");
+                    $(".effectHoverStyle").css("height","0px");
+                    effectHoverStyle = false;
+                }else{
+                    $(".effectHoverStyle").css("visibility","visible");
+                    $(".effectHoverStyle").css("height","auto");
+                    effectHoverStyle = true;
+                }
+            });
+            $(".effectActiveStyle").css("visibility","hidden");
+            $(".effectActiveStyle").css("height","0px");
+            $(".activeStyle").click(function(){
+                if(effectActiveStyle){
+                    $(".effectActiveStyle").css("visibility","hidden");
+                    $(".effectActiveStyle").css("height","0px");
+                    effectActiveStyle = false;
+                }else{
+                    $(".effectActiveStyle").css("visibility","visible");
+                    $(".effectActiveStyle").css("height","auto");
+                    effectActiveStyle = true;
+                }
+            });
+
             $(".buttonSent").click(function(){
                 //框設置
                 var widthSet=$('input[name=widthSet]').val();
@@ -314,21 +307,72 @@
                 var wordSize=$('input[name=wordSize]').val();
                 var wordColor=$('input[name=wordColor]').val();
 
+                //hover
+                var widthHoverSet=$('input[name=widthHoverSet]').val();
+                var heightHoverSet=$('input[name=heightHoverSet]').val();
+                var borderHoverEffect=$('input[name=borderHoverEffect]').val();
+                var backgroundColorHover=$('input[name=backgroundColorHover]').val();
+                var wordSizeHover=$('input[name=wordSizeHover]').val();
+                var wordColorHover=$('input[name=wordColorHover]').val();
+
+                //active
+                var widthActiveSet=$('input[name=widthActiveSet]').val();
+                var heightActiveSet=$('input[name=heightActiveSet]').val();
+                var borderColorActive=$('input[name=borderColorActive]').val();
+                var backgroundColorActive=$('input[name=backgroundColorActive]').val();
+                var wordSizeActive=$('input[name=wordSizeActive]').val();
+                var wordColorActive=$('input[name=wordColorActive]').val();
+
                 $('.buttonResult').css("width",widthSet+"px");
                 $('.buttonResult').css("height",heightSet+"px");
                 $('.buttonResult').css("border-color",borderColor);
                 $('.buttonResult').css("background",backgroundColor);
                 $('.buttonResult').css("border-radius",radiusSet+"px");
 
-                //$('.buttonResult').css("width",buttonWord);
                 $('.buttonResult').css("font-family",wordStyle);
                 $('.buttonResult').css("font-size",wordSize+"px");
                 $('.buttonResult').css("color",wordColor);
                 $('.buttonResult').val(buttonWord);
-                alert(wordStyle);
+                $(".buttonResult").focus(function(){
+                    //focus
+                    $('.buttonResult').css("width",widthActiveSet+"px");
+                    $('.buttonResult').css("height",heightActiveSet+"px");
+                    $('.buttonResult').css("border-color",borderColorActive);
+                    $('.buttonResult').css("background",backgroundColorActive);
+                    $('.buttonResult').css("font-size",wordSizeActive+"px");
+                    $('.buttonResult').css("color",wordColorActive);
+                });
 
+                $(".buttonResult").hover(function(){
+                    //hover
+                    $('.buttonResult').css("width",widthHoverSet+"px");
+                    $('.buttonResult').css("height",heightHoverSet+"px");
+                    $('.buttonResult').css("border-color",borderHoverEffect);
+                    $('.buttonResult').css("background",backgroundColorHover);
+                    $('.buttonResult').css("font-size",wordSizeHover+"px");
+                    $('.buttonResult').css("color",wordColorHover);
+                    $(".buttonResult").active(function(){
+                    //focus
+                        $('.buttonResult').css("width",widthActiveSet+"px");
+                        $('.buttonResult').css("height",heightActiveSet+"px");
+                        $('.buttonResult').css("border-color",borderColorActive);
+                        $('.buttonResult').css("background",backgroundColorActive);
+                        $('.buttonResult').css("font-size",wordSizeActive+"px");
+                        $('.buttonResult').css("color",wordColorActive);
+                    });
+                },function(){
+                    $('.buttonResult').css("width",widthSet+"px");
+                    $('.buttonResult').css("height",heightSet+"px");
+                    $('.buttonResult').css("border-color",borderColor);
+                    $('.buttonResult').css("background",backgroundColor);
+                    $('.buttonResult').css("font-size",wordSize+"px");
+                    $('.buttonResult').css("color",wordColor);
+                });
+
+                
 
             });
+
 
 
             
