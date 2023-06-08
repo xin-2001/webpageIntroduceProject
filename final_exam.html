@@ -28,46 +28,66 @@
                 margin: 0px;
                 
             }
+            .CSSButton{
+                margin: 0px 10px;
+                text-align: center;
+            }
+            .CSSButton>input{
+                margin: 0px 20px;
+            }
+            .bgSet{
+                background-color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(5px);
+                border-radius: 10px;
+            }
+
             .cssSet >p{
                 background: #9db5b2;
                 padding: 10px;
                 border-radius: 20px;
                 margin: 0px;
+                text-align: center;
             }
             .buttonEffect > p{
                 background: #7f6a93;
                 padding-left: 10px;
                 border-radius: 10px;
                 margin: 0px;
+                text-align: center;
             }
             .effectHoverStyle{
-                border: solid 1px #7f6a93;
                 margin: 0px;
-                border-radius: 10px;
-                background-color: rgba(0, 0, 0, 0.6);
                 padding: 3px 10px;
+                line-height: 30px;
+                width: fit-content;
+
             }
             .effectActiveStyle{
-                border: solid 1px #7f6a93;
                 margin: 0px;
-                border-radius: 10px;
-                background-color: rgba(0, 0, 0, 0.6);
                 padding: 3px 10px;
+                line-height: 30px;
+                width: fit-content;
+            }
+            input{
+                background-color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(5px);
+            }
+            select{
+                background-color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(5px);
             }
 
             .buttonOutSet{
-                border: solid 1px #a2c5ac;
-                margin: 0px;
-                border-radius: 10px;
-                background-color: rgba(0, 0, 0, 0.6);
+                margin: 0px auto;
                 padding: 3px 10px;
+                line-height: 30px;
+                width: fit-content;
             }
             .buttonInSet{
-                border: solid 1px #a2c5ac;
-                margin: 0px;
-                border-radius: 10px;
-                background-color: rgba(0, 0, 0, 0.6);
+                margin: 0px auto;
                 padding: 3px 10px;
+                line-height: 30px;
+                width: fit-content;
             }
             .buttonEffect{
                 border: solid 1px #a2c5ac;
@@ -77,11 +97,11 @@
             
             .windowsLeft{
                 float: left;
-                width: 60%;
+                width: 40%;
             }
             .windowsRight{
                 float: left;
-                width: 40%;
+                width: 60%;
                 height: 100%;
 
             }
@@ -114,12 +134,8 @@
                 text-align: left;
                 font-size: 20px;
             }
-            .cssResult p{
-                text-align: left;
-            }
-            .buttonEffect div{
-                /*margin-top: -12px;*/
-            }
+            
+            
             .codeHTMLText{
                 width: 100%;
                 height: auto;
@@ -134,7 +150,14 @@
             textarea{
                 border-color: #FFFFFF;
                 padding: 3px;
-                background-color: rgba(0, 0, 0, 0.6);
+                background-color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(5px);
+            }
+            h1{
+                text-align: center;
+            }
+            h3{
+                text-align: center;
             }
             
 
@@ -147,6 +170,7 @@
             <div class="windowsLeft">
                 <div class="cssSet">
                     <p class="buttonBackgroundStyle">按鈕背景、尺寸、邊框</p>
+                    <div class="bgSet">
                     <div class="buttonOutSet">
                         寬度：<input type="number" name="widthSet" style="width: 50px;" value="100">px
                         <br>
@@ -160,7 +184,9 @@
                         <br>
 
                     </div>
+                    </div>
                     <p class="wordSetStyle">文字設定</p>
+                    <div class="bgSet">
                     <div class="buttonInSet">
                         按鈕文字：<input type="text" name="buttonWord" style="width: 100px;" value="Button">
                         <br>
@@ -221,12 +247,13 @@
                         字體顏色：<input type="color" name="wordColor" value="#000000" style="width: 30px;"/>px
 
                     </div>
+                    </div>
                     <p class="effectStyle">特效</p>
                     <div class="buttonEffect">
                         <p class="hoverStyle">滑鼠移到上方時</p>
+                        <div class="bgSet">
                         <div class="effectHoverStyle">
-                            <input type="button" class="buttonSame1" value="同上">
-                            <br>
+                            
                             寬度：<input type="number" name="widthHoverSet" style="width: 50px;" value="100">px
                             <br>
                             高度：<input type="number" name="heightHoverSet" style="width: 50px;" value="30">px
@@ -237,13 +264,16 @@
                             <br>
                             字體大小：<input type="number" name="wordSizeHover" value="12" style="width: 50px;">px
                             <br>
-                            字體顏色：<input type="color" name="wordColorHover" value="#000000" style="width: 30px;"/>px
+                            字體顏色：<input type="color" name="wordColorHover" value="#000000" style="width: 30px;"/>px<br>
+                            <input type="button" class="buttonSame1" value="同上">
+                            
                                 
                         </div>
+                        </div>
                         <p class="activeStyle">滑鼠點擊時</p>
+                        <div class="bgSet">
                         <div class="effectActiveStyle">
-                            <input type="button" class="buttonSame2" value="同上">
-                            <br>
+                            
                             寬度：<input type="number" name="widthActiveSet" style="width: 50px;" value="100">px
                             <br>
                             高度：<input type="number" name="heightActiveSet" style="width: 50px;" value="30">px
@@ -254,13 +284,16 @@
                             <br>
                             字體大小：<input type="number" name="wordSizeActive" value="12" style="width: 50px;">px
                             <br>
-                            字體顏色：<input type="color" name="wordColorActive" value="#000000" style="width: 30px;"/>px
+                            字體顏色：<input type="color" name="wordColorActive" value="#000000" style="width: 30px;"/>px<br>
+                            <input type="button" class="buttonSame2" value="同上">
+                            
                         </div>
-
                     </div>
-
-                    <input type="button" class="buttonSent" value="建立按鈕">
-                    <input type="button" class="buttonReset" value="重製">
+                    </div>
+                    <div class="CSSButton">
+                        <input type="button" class="buttonSent" value="建立按鈕">
+                        <input type="button" class="buttonReset" value="重製">
+                    </div>
 
                 </div>
             </div>
@@ -269,10 +302,12 @@
                     <p class="textResult">結果顯示：</p>
                     <input type="button" class="buttonResult" value="Button">
                     <br>
-                    <p>HTML：</p>
+                    <p class="textResult">HTML</p>
                     <textarea readonly="false" class="codeHTMLText" wrap="physical"></textarea>
-                    <p>CSS：</p>
+                    <input type="button" class="buttonCopyHTML" value="複製">
+                    <p class="textResult">CSS</p>
                     <textarea readonly="false" class="codeCSSText" wrap="physical"></textarea>
+                    <input type="button" class="buttonCopyCSS" value="複製">
                 </div>
 
             </div>
@@ -647,7 +682,18 @@
                 $('input[name=wordSizeActive]').val(wordSize);
                 $('input[name=wordColorActive]').val(wordColor);
             });
-            
+            $(".buttonCopyHTML").click(function(){
+                var content = $(".codeHTMLText").val();
+                alert(content);
+                content.select();
+                document.execCommand('copy');
+            });
+            $(".buttonCopyCSS").click(function(){
+                var content = $(".codeCSSText").val();
+                alert(content);
+                content.select();
+                document.execCommand('copy');
+            });
 
 
 
