@@ -78,6 +78,11 @@
             .buttonEffect div{
                 margin-bottom: 5px;
             }
+            .codeText{
+                width: 100%;
+                height: auto;
+                margin-top: 10px;
+            }
             
 
         </style>
@@ -201,6 +206,7 @@
                     </div>
 
                     <input type="button" class="buttonSent" value="建立按鈕">
+                    <input type="button" class="buttonReset" value="重製">
 
                 </div>
             </div>
@@ -208,6 +214,8 @@
                 <div class="cssResult">
                     <p class="textResult">結果顯示：</p>
                     <input type="button" class="buttonResult" value="Button">
+                    <br>
+                    <textarea readonly="false" class="codeText"></textarea>
                 </div>
 
             </div>
@@ -333,7 +341,8 @@
                 $('.buttonResult').css("font-size",wordSize+"px");
                 $('.buttonResult').css("color",wordColor);
                 $('.buttonResult').val(buttonWord);
-                $(".buttonResult").focus(function(){
+                
+                /*$(".buttonResult").focus(function(){
                     //focus
                     $('.buttonResult').css("width",widthActiveSet+"px");
                     $('.buttonResult').css("height",heightActiveSet+"px");
@@ -341,7 +350,9 @@
                     $('.buttonResult').css("background",backgroundColorActive);
                     $('.buttonResult').css("font-size",wordSizeActive+"px");
                     $('.buttonResult').css("color",wordColorActive);
+
                 });
+
 
                 $(".buttonResult").hover(function(){
                     //hover
@@ -351,15 +362,6 @@
                     $('.buttonResult').css("background",backgroundColorHover);
                     $('.buttonResult').css("font-size",wordSizeHover+"px");
                     $('.buttonResult').css("color",wordColorHover);
-                    $(".buttonResult").active(function(){
-                    //focus
-                        $('.buttonResult').css("width",widthActiveSet+"px");
-                        $('.buttonResult').css("height",heightActiveSet+"px");
-                        $('.buttonResult').css("border-color",borderColorActive);
-                        $('.buttonResult').css("background",backgroundColorActive);
-                        $('.buttonResult').css("font-size",wordSizeActive+"px");
-                        $('.buttonResult').css("color",wordColorActive);
-                    });
                 },function(){
                     $('.buttonResult').css("width",widthSet+"px");
                     $('.buttonResult').css("height",heightSet+"px");
@@ -367,7 +369,40 @@
                     $('.buttonResult').css("background",backgroundColor);
                     $('.buttonResult').css("font-size",wordSize+"px");
                     $('.buttonResult').css("color",wordColor);
+                    
+                });*/
+
+                $( ".buttonResult" ).mousedown(function() {
+                    $('.buttonResult').css("width",widthActiveSet+"px");
+                    $('.buttonResult').css("height",heightActiveSet+"px");
+                    $('.buttonResult').css("border-color",borderColorActive);
+                    $('.buttonResult').css("background",backgroundColorActive);
+                    $('.buttonResult').css("font-size",wordSizeActive+"px");
+                    $('.buttonResult').css("color",wordColorActive);
+                }).mouseup(function() {
+                    $('.buttonResult').css("width",widthHoverSet+"px");
+                    $('.buttonResult').css("height",heightHoverSet+"px");
+                    $('.buttonResult').css("border-color",borderHoverEffect);
+                    $('.buttonResult').css("background",backgroundColorHover);
+                    $('.buttonResult').css("font-size",wordSizeHover+"px");
+                    $('.buttonResult').css("color",wordColorHover);
+                }).mouseenter(function() {
+                    $('.buttonResult').css("width",widthHoverSet+"px");
+                    $('.buttonResult').css("height",heightHoverSet+"px");
+                    $('.buttonResult').css("border-color",borderHoverEffect);
+                    $('.buttonResult').css("background",backgroundColorHover);
+                    $('.buttonResult').css("font-size",wordSizeHover+"px");
+                    $('.buttonResult').css("color",wordColorHover);
+                }).mouseleave(function() {
+                    $('.buttonResult').css("width",widthSet+"px");
+                    $('.buttonResult').css("height",heightSet+"px");
+                    $('.buttonResult').css("border-color",borderColor);
+                    $('.buttonResult').css("background",backgroundColor);
+                    $('.buttonResult').css("font-size",wordSize+"px");
+                    $('.buttonResult').css("color",wordColor);
                 });
+
+                
 
                 
 
