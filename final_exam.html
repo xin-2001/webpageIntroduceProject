@@ -95,7 +95,7 @@
                 <div class="buttonInSet">
                     按鈕文字：<input type="text" name="buttonWord" style="width: 100px;" value="Button">
                     <br>
-                    字型：<select name="wordStyle" value="DFKai-SB">
+                    字型：<select name="wordStyle" >
                             <option value="DFKai-SB">標楷體</option>
                             <option value="MingLiU">細明體</option>
                             <option value="PMingLiU">新細明體</option>
@@ -214,7 +214,7 @@
                 var radiusSet=$('input[name=radiusSet]').val();
                 //文字設置
                 var buttonWord=$('input[name=buttonWord]').val();
-                var wordStyle=$('input[name=wordStyle]').val();
+                var wordStyle=$('select[name=wordStyle]').val();
                 var wordSize=$('input[name=wordSize]').val();
                 var wordColor=$('input[name=wordColor]').val();
 
@@ -229,6 +229,7 @@
                 $('.buttonResult').css("font-size",wordSize+"px");
                 $('.buttonResult').css("color",wordColor);
                 $('.buttonResult').val(buttonWord);
+                alert(wordStyle);
 
 
             });
