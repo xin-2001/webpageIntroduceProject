@@ -19,6 +19,11 @@
                 line-height:30px;
 
             }
+            .cssSet p{
+                margin-bottom: -5px;
+                margin-top: -5px;
+                background: #FFFFFF;
+            }
             
             .test{
                 font-family: 'Noto Color Emoji', sans-serif;
@@ -35,6 +40,33 @@
                 border: solid 1px #88DDFF;
                 margin: 5px;
             }
+            .windowsLeft{
+                float: left;
+                width: 70%;
+            }
+            .windowsRight{
+                float: left;
+                width: 30%;
+
+            }
+            .cssResult{
+                border: solid 1px #8800FF;
+                border-radius: 20px;
+                padding: 10px;
+                line-height:30px;
+                text-align: center;
+            }
+            .buttonResult{
+                width: 100px;
+                height: 30px;
+                border: solid 1px #000000;
+                background: #DDDDDD;
+                border-radius: 0px;
+                font-family: "標楷體";
+                font-size: 12px;
+                color: #000000;
+
+            }
             
 
         </style>
@@ -43,56 +75,27 @@
         <h1>Button 生成器</h1>
         <h3>自行決定想要的button樣式</h3>
         
-        <div class="cssSet">
-            <p class="buttonBackground">按鈕背景、尺寸、邊框</p>
-            <div class="buttonOutSet">
-                寬度：<input type="number" name="widthSet" style="width: 50px;">px
-                <br>
-                高度：<input type="number" name="heightSet" style="width: 50px;">px
-                <br>
-                邊框顏色：<input type="color" name="borderColor" value="#ff0000" style="width: 30px;"/>
-                <br>
-                背景顏色：<input type="color" name="backgroundColor" value="#000000" style="width: 30px;"/>
-                <br>
-                邊框圓角：<input type="number" name="radiusSet" style="width: 50px;">px
-                <br>
+        <div class="windowsLeft">
+            <div class="cssSet">
+                <p class="buttonBackgroundStyle">按鈕背景、尺寸、邊框</p>
+                <div class="buttonOutSet">
+                    寬度：<input type="number" name="widthSet" style="width: 50px;" value="100">px
+                    <br>
+                    高度：<input type="number" name="heightSet" style="width: 50px;" value="30">px
+                    <br>
+                    邊框顏色：<input type="color" name="borderColor" value="#000000" style="width: 30px;" />
+                    <br>
+                    背景顏色：<input type="color" name="backgroundColor" value="#DDDDDD" style="width: 30px;"/>
+                    <br>
+                    邊框圓角：<input type="number" name="radiusSet" style="width: 50px;" value="0">px
+                    <br>
 
-            </div>
-            <p>文字設定</p>
-            <div class="buttonInSet">
-                按鈕文字：<input type="text" name="buttonWord" style="width: 100px;">
-                <br>
-                字型：<select name="wordStyle">
-                        <option value="DFKai-SB">標楷體</option>
-                        <option value="MingLiU">細明體</option>
-                        <option value="PMingLiU">新細明體</option>
-                        <option value="Microsoft_JhengHei">微軟正黑體</option>
-                        <option value="Comic_Sans_MS">Comic Sans MS</option>
-                    </select>
-                <br>
-                字體大小：<input type="number" name="wordSize" value="12" style="width: 50px;">px
-                <br>
-                字體顏色：<input type="color" name="wordColor" value="#FFFFFF" style="width: 30px;"/>px
-
-            </div>
-            <p>特效</p>
-            <div class="buttonEffect">
-                <div class="buttonOutEffectSet">
-                    寬度：<input type="number" name="widthEffectSet" style="width: 50px;">px
-                    <br>
-                    高度：<input type="number" name="heightEffectSet" style="width: 50px;">px
-                    <br>
-                    邊框顏色：<input type="color" name="borderColorEffect" value="#ff0000" style="width: 30px;"/>
-                    <br>
-                    背景顏色：<input type="color" name="backgroundColorEffect" value="#000000" style="width: 30px;"/>
-                    <br>
-                    邊框圓角：<input type="number" name="radiusEffectSet" style="width: 50px;">px
-                    <br>
                 </div>
-                <div class="buttonInEffectSet">
-                    按鈕文字：<input type="text" name="buttonWordEffect" style="width: 100px;">
+                <p class="wordSetStyle">文字設定</p>
+                <div class="buttonInSet">
+                    按鈕文字：<input type="text" name="buttonWord" style="width: 100px;" value="Button">
                     <br>
-                    字型：<select name="wordStyleEffect">
+                    字型：<select name="wordStyle" value="DFKai-SB">
                             <option value="DFKai-SB">標楷體</option>
                             <option value="MingLiU">細明體</option>
                             <option value="PMingLiU">新細明體</option>
@@ -100,47 +103,137 @@
                             <option value="Comic_Sans_MS">Comic Sans MS</option>
                         </select>
                     <br>
-                    字體大小：<input type="number" name="wordSizeEffect" value="12" style="width: 50px;">px
+                    字體大小：<input type="number" name="wordSize" value="12" style="width: 50px;" value="12">px
                     <br>
-                    字體顏色：<input type="color" name="wordColorEffect" value="#FFFFFF" style="width: 30px;"/>px
+                    字體顏色：<input type="color" name="wordColor" value="#000000" style="width: 30px;"/>px
 
                 </div>
+                <p class="effectStyle">特效</p>
+                <div class="buttonEffect">
+                    <div class="buttonOutEffectSet">
+                        寬度：<input type="number" name="widthEffectSet" style="width: 50px;">px
+                        <br>
+                        高度：<input type="number" name="heightEffectSet" style="width: 50px;">px
+                        <br>
+                        邊框顏色：<input type="color" name="borderColorEffect" value="#ff0000" style="width: 30px;"/>
+                        <br>
+                        背景顏色：<input type="color" name="backgroundColorEffect" value="#000000" style="width: 30px;"/>
+                        <br>
+                        邊框圓角：<input type="number" name="radiusEffectSet" style="width: 50px;">px
+                        <br>
+                    </div>
+                    <div class="buttonInEffectSet">
+                        按鈕文字：<input type="text" name="buttonWordEffect" style="width: 100px;">
+                        <br>
+                        字型：<select name="wordStyleEffect">
+                                <option value="DFKai-SB">標楷體</option>
+                                <option value="MingLiU">細明體</option>
+                                <option value="PMingLiU">新細明體</option>
+                                <option value="Microsoft_JhengHei">微軟正黑體</option>
+                                <option value="Comic_Sans_MS">Comic Sans MS</option>
+                            </select>
+                        <br>
+                        字體大小：<input type="number" name="wordSizeEffect" value="12" style="width: 50px;">px
+                        <br>
+                        字體顏色：<input type="color" name="wordColorEffect" value="#FFFFFF" style="width: 30px;"/>px
+                    </div>
+                    
+
+                </div>
+
                 
 
+                <p class="test">歆abcABC123楊麗芳😊🫢</p>
+
+                <input type="button" class="buttonSent" value="建立按鈕">
+
+            </div>
+        </div>
+        <div class="windowsRight">
+            <div class="cssResult">
+            
+                <input type="button" class="buttonResult" value="Button">
             </div>
 
-
-
-            
-            
-
-            <br>
-
-
-
-            <p class="test">歆abcABC123楊麗芳😊🫢</p>
-
-
         </div>
-        <div class="cssResult">
-            
-
-        </div>
+        
 
 
         
         <script src="jquery.js"></script>
         <script type="text/javascript">
             var buttonOutSet = true;
-            $(".buttonBackground").click(function(){
+            var buttonInSet = false;
+            var effectStyle = false;
+            
+            $(".buttonOutSet").css("visibility","visible");
+            $(".buttonBackgroundStyle").click(function(){
                 if(buttonOutSet){
                     $(".buttonOutSet").css("visibility","hidden");
+                    $(".buttonOutSet").css("height","0px");
+
                     buttonOutSet = false;
                 }else{
                     $(".buttonOutSet").css("visibility","visible");
+                    $(".buttonOutSet").css("height","auto");
                     buttonOutSet = true;
                 }
             });
+            $(".buttonInSet").css("visibility","hidden");
+            $(".buttonInSet").css("height","0px");
+            $(".wordSetStyle").click(function(){
+                if(buttonInSet){
+                    $(".buttonInSet").css("visibility","hidden");
+                    $(".buttonInSet").css("height","0px");
+                    buttonInSet = false;
+                }else{
+                    $(".buttonInSet").css("visibility","visible");
+                    $(".buttonInSet").css("height","auto");
+                    buttonInSet = true;
+                }
+            });
+            $(".buttonEffect").css("visibility","hidden");
+            $(".buttonEffect").css("height","0px");
+            $(".effectStyle").click(function(){
+                if(effectStyle){
+                    $(".buttonEffect").css("visibility","hidden");
+                    $(".buttonEffect").css("height","0px");
+                    effectStyle = false;
+                }else{
+                    $(".buttonEffect").css("visibility","visible");
+                    $(".buttonEffect").css("height","auto");
+                    effectStyle = true;
+                }
+            });
+            $(".buttonSent").click(function(){
+                //框設置
+                var widthSet=$('input[name=widthSet]').val();
+                var heightSet=$('input[name=heightSet]').val();
+                var borderColor=$('input[name=borderColor]').val();
+                var backgroundColor=$('input[name=backgroundColor]').val();
+                var radiusSet=$('input[name=radiusSet]').val();
+                //文字設置
+                var buttonWord=$('input[name=buttonWord]').val();
+                var wordStyle=$('input[name=wordStyle]').val();
+                var wordSize=$('input[name=wordSize]').val();
+                var wordColor=$('input[name=wordColor]').val();
+
+                $('.buttonResult').css("width",widthSet+"px");
+                $('.buttonResult').css("height",heightSet+"px");
+                $('.buttonResult').css("border-color",borderColor);
+                $('.buttonResult').css("background",backgroundColor);
+                $('.buttonResult').css("border-radius",radiusSet+"px");
+
+                //$('.buttonResult').css("width",buttonWord);
+                $('.buttonResult').css("font-family",wordStyle);
+                $('.buttonResult').css("font-size",wordSize+"px");
+                $('.buttonResult').css("color",wordColor);
+                $('.buttonResult').val(buttonWord);
+
+
+            });
+
+
             
         </script>
             
