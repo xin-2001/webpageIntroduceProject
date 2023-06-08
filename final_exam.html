@@ -3,9 +3,15 @@
     <head>
         <meta charset="utf-8" />
         <title>網頁程式設計 期末專案</title>
-        <!--CBE109042陳歆宜-->
+        <!--Group-9
+            CBE109042陳歆宜 CBE109048徐采碟
+            CBE109049俞玟妍 CBE109050楊麗芳-->
+        
+        <!--font相關的css-->
         <link rel="stylesheet" href="fonts.css">
+        <!--網站小圖標-->
         <link rel="Shortcut Icon" type="image/x-icon" href="https://hackmd.io/_uploads/Bk-_4n1P2.png" />
+        <!--本站相關的css-->
         <style type="text/css">
             /*企鵝*/
             * {
@@ -682,6 +688,10 @@
                 $('input[name=wordSizeActive]').val(wordSize);
                 $('input[name=wordColorActive]').val(wordColor);
             });
+
+            ////////////////////////////////////////////////////////////////
+            ///////////////解決辦法:創造一個虛擬的textarea去處理他///////////////
+            ////////////////////////////////////////////////////////////////
             $(".buttonCopyHTML").click(function(){
                 //HTML複製
                 contentCopy = $(".codeHTMLText").val();
